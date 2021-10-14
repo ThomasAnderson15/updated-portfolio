@@ -1,0 +1,111 @@
+body {
+    align-items: center;
+    align-content: center;
+    justify-content:center;
+    display: flex;
+    padding:0;
+  }
+
+  .intro1 {
+    align-items: center;
+    align-content: center;
+    justify-content:center;
+    text-align: center;
+    color: #3f3f3f;
+    font-weight: 400;
+  }
+
+  .intro2 {
+    align-items: center;
+    align-content: center;
+    justify-content:center;
+    text-align: center;
+    color: #3f3f3f;
+    font-weight: 400;
+
+  }
+
+  .intro-box {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 1px 1px 3px rgb(200, 199, 199);
+    background-color: #f6f9fb;
+    padding: 20px;
+  }
+  
+  .bouncing-text {
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    font-size: 70px;
+    font-family: arial black;  
+  }
+
+  .W, .E, .L, .C, .O, .M, .EE {
+    color: #dfdfdf;
+    text-shadow: 0 3px grey, 0 5px grey, 0 7px grey;
+  }
+
+  @keyframes bounce {
+    0%   { transform: scale(1,1) translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-55px);}
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    58%  { transform: scale(1,1) translateY(-7px); }
+    65%  { transform: scale(1,1) translateY(0);}
+    100% { transform: scale(1,1) translateY(0);}
+}
+
+.W {
+animation: bounce 1s ease infinite;
+}
+
+.E {
+animation: bounce 1s ease infinite .1s;
+}
+
+.L {
+animation: bounce 1s ease infinite .2s;
+}
+
+.C {
+animation: bounce 1s ease infinite .3s;
+}
+
+.O {
+animation: bounce 1s ease infinite .4s;
+}
+
+
+
+
+.bouncing-text:before, .bouncing-text:after {
+    content:"";
+    background-color: rgba(0,0,0,0.4);
+    width: 50px;
+    height:5px;
+    border-radius:50%;
+    top:82px;
+    z-index:-1;
+  }
+  
+  .bouncing-text:before {
+    left:0;
+    animation: scale 1s linear infinite;
+  }
+  
+  @keyframes scale {
+    0% {transform: scaleX(1);}
+    25% {transform: scaleX(0.4);}
+    50% {transform: scaleX(1);}
+    75% {transform: scaleX(0.9);}
+    100% {transform: scaleX(1);}
+  }
+  
+  .bouncing-text:after {
+    left: 57px;
+    animation: scale 1s linear infinite .2s;
+  }
+  
